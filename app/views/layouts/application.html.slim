@@ -50,11 +50,11 @@ html
                 = link_to archives_path do
                   i.fi-align-justify
                   | 时间线
-              li
-                label About
-                = link_to about_path do
-                  i.fi-torso
-                  | 关于我
+              / li
+              /   label About
+              /   = link_to about_path do
+              /     i.fi-torso
+              /     | 关于我
           section.main-section ng-app="app"
             - flash.each do |name, msg|
               - if msg.is_a?(String)

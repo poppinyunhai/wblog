@@ -6,7 +6,7 @@ end
 
 gem 'rails', '4.1.8'
 #gem 'sprockets', '2.12.1'
-gem 'sass-rails', '~> 4.0.4'
+gem 'sass-rails'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'

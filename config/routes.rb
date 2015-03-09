@@ -36,7 +36,7 @@ WBlog::Application.routes.draw do
     root to: 'dashboard#index'
   end
 
-  get '/about' => 'home#index'
+  # get '/about' => 'home#index'
   get '/mobile' => 'home#mobile'
   get '/:type' => 'archives#index', constraints: { type: /tech|life|creator/ }
 end
