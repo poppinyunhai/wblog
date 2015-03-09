@@ -3,9 +3,12 @@ require 'mina/rails'
 require 'mina/git'
 require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
-set :domain, 'yafeilee.me'
-set :deploy_to, '/home/ruby/wblog'
-set :repository, 'git@github.com:windy/wblog.git'
+set :domain, '106.187.100.162'
+set :deploy_to, '/home/site/wblog'
+set :repository, 'git@github.com:poppinyunhai/wblog.git'
+set :keep_releases, 20
+set :forward_agent, true
+set :port, '22 -A'
 set :branch, 'master'
 set :app_path, "#{deploy_to}/#{current_path}"
 
@@ -13,11 +16,12 @@ set :app_path, "#{deploy_to}/#{current_path}"
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_paths, ['config/mongoid.yml', 'config/application.yml', 'log', 'tmp', 'public/uploads', 'public/personal' ]
 
-set :user, 'ruby'    # Username in the server to SSH to.
+set :user, 'deploy'    # Username in the server to SSH to.
 
 task :environment do
-  queue! %[source /usr/local/rvm/scripts/rvm]
-  queue! %[rvm use 2.0.0]
+  # queue! %[source /usr/local/rvm/scripts/rvm]
+  # queue! %[rvm use 2.0.0]
+  invoke :'rvm:use[ruby-2.1.2@default]'
 end
 
 task :setup => :environment do
