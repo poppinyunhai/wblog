@@ -1,4 +1,4 @@
-app_path = "/home/deploy/site/wblog"
+app_path = "/home/deploy/sites/wblog"
 
 worker_processes   1
 preload_app        true
