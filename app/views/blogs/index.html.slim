@@ -48,3 +48,9 @@
             .rss-subscribe ng-show="type == 'rss'"
               = link_to rss_blogs_path do
                 - image_tag('rss.png')
+    h4 LINK
+    .row.ng-cloak
+      .small-12.medium-6.large-12.columns
+        ul.subscribe-ul
+          li
+            = link_to 'shooter', 'http://shooter.gl/'
