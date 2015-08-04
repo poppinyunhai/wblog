@@ -40,9 +40,7 @@
                 span.subscribe-success ng-show="subscribe_success" 订阅成功
                 span.subscribe-fail ng-show="subscribe_success == false" {{subscribe_fail_msg}}
           li
-            = link_to '微信扫一扫', '', "ng-click"=>"click('weixin')"
-            .weixin-subscribe ng-show="type == 'weixin'"
-              = render partial: "qrcode", locals: { str: root_url }
+            = link_to 'terry', 'http://terrytai.me/'
           li
             = link_to 'RSS订阅', '', "ng-click"=>"click('rss')"
             .rss-subscribe ng-show="type == 'rss'"
@@ -53,6 +51,6 @@
       .small-12.medium-6.large-12.columns
         ul.subscribe-ul
           li
-          = link_to 'terry', 'http://terrytai.me/'
+          
           li
           = link_to 'shooter', 'http://ta.shooter.gl/'
